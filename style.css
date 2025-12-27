@@ -1,0 +1,261 @@
+/* css respnsive*/
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	background: #f5f3ff;
+	border-radius:10px;
+}
+
+.logo img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	animation: slideIn 1s ease-in-out;
+}
+@keyframes slideIn{
+	from{
+		transform:translateY(-50px);
+		opacity:0;
+	}
+	to{
+		transform:translateY(0);
+		opacity:1;
+	}
+}
+
+.logo span{
+	color:blue;
+	font-weight:bold;
+}
+
+.bienvenue{
+	background: #f4f4f4;
+	margin:100px auto;
+	justify-content:center;
+	align-items:center;
+	width:40%;
+	padding:60px 20px;
+	border-radius:10px;
+	text-align:center	
+}
+
+
+
+.footer{
+	background: #f2f2ff;
+	padding:10px;
+	margin-top:150px;
+	text-align:center;
+	font-size:1.4rem;
+	border-radius:10px;
+}
+
+.bienvenue h1{
+	text-align:center;
+	font-size:2rem;
+	color:Blue;
+	font-weight:bold;
+	animation:zoomer 2s ease-in-out infinte alternate;
+}
+
+.apropos{
+	background: #f2f2ff;
+	width:30%;
+	max-width:300px;
+	margin:auto;
+	margin-top:60px;
+	border-radius:10px;
+}
+.apropos h1{
+	color:blue;
+	text-align:center;
+	margin-bottom:100px;
+padding-top:20px;	
+}
+
+.apropos p{
+	color:black;
+	font-size:1.4rem;
+	padding-bottom:100px;
+	margin-top:20px;
+}
+@media (max-width: 768px) {
+  .apropos {
+    text-align: center;
+  }
+}
+
+
+.contact{
+	text-align:center;
+	color:blue;
+}
+
+.form{
+	background:#f2f2ff;
+	/* width:30%; */
+	max-width:400px;
+	display:flex;
+	flex-direction:column;
+	margin:auto;
+	gap:15px;
+	padding:20px;
+	border-radius:10px;
+	
+}
+
+ .form input,textarea{
+	padding:10px;
+	width:90%;
+	border-radius: 8px;
+	border:none;
+	margin-bottom:10px;
+}
+
+.form button{
+	width:60%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin:auto;
+	padding:10px;
+	background:blue;
+	border-radius:8px;
+	color:white;
+	font-size:1.4rem;	
+}
+@media (max-width: 768px) {
+  .contact {
+    text-align: center;
+  }
+}
+
+
+
+/*Partie Services*/
+
+.services{
+	background: #f4f4f4;
+	width:30%;
+	max-width:600px;
+	margin:auto;
+	display:grid;
+	grid-template-columns:reapeat(3,1fr);
+	align-items:center;
+	justify-content: space-between;
+	padding:15px;
+	border-radius:8px;
+}
+
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.service{
+	background:white;
+	width:350px;
+	margin:10px;
+	padding:10px;
+	font-size:1.1rem;
+	text-align:center;
+	border-radius:8px;
+	
+}
+
+.servh1{
+	text-align:center;
+	color:blue;
+	margin-top:100px;
+}
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+/*Menu Desktop*/
+.nav{
+	display:flex;
+	gap:25px;
+}
+.nav a{
+	text-decoration: none;
+	color: blue;
+	font-weight: bold;
+}
+
+/*Bouton mobile cache par defaut*/
+.menu-toggle{
+	display:none;
+	font-size:26px;
+	cursor:pointer;
+}
+
+/*Version telephone (media)*/
+@media (max-width:768px){
+	/*Affiche le bouton*/
+	.menu-toggle{
+		display:block;
+	}
+	
+/*Cache le menu*/
+.nav{
+	display:none;
+	flex-direction:column;
+	background:white;
+	position:absolute;
+	top:70px;
+	right:15px;
+	padding:15px;
+	border-radius:15px;
+	box-shadow:0 4px 10px rgba(0,0,0,0.1)
+}
+
+/*Menu visible qund actif*/
+.nav.active{
+	display:flex;
+}
+}
+
+/*Java script(interaction)*/
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+nav.classList.toggle("active");
+})
+</script>
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav a {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
